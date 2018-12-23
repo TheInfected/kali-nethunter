@@ -50,7 +50,7 @@ find_boot() {
 		# if the boot block is a block device, we use flash_image when possible
 		elif [ -b "$boot_block" ]; then
 			case "$boot_block" in
-				/dev/block/bml*|/dev/block/mtd*|/dev/block/mmc*)
+				/dev/block/bml*|/dev/block/mtd*|/dev/block/mmc*|/dev/block/sde*)
 					use_dd=false ;;
 				*)
 					use_dd=true ;;
